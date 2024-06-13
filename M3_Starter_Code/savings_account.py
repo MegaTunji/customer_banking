@@ -15,40 +15,45 @@ def create_savings_account(balance, interest_rate, months):
         float: The updated savings account balance after adding the interest earned.
         And returns the interest earned.
     """
+    
+
+   
     # Create an instance of the `Account` class and pass in the balance and interest parameters.
     #  Hint: You need to add the interest as a value, i.e, 0.
     # ADD YOUR CODE HERE
-    SavingsAccount = Account('Tunji', 80000, 0)
-    print(account)
-    
-    class SavingsAccount(Account):
-        def __init__(self, balance=0, interest=0):
-            super().__init__(balance, interest)
-            self.interest_rate = interest_rate
+    savings_account = Account(0,0)
+        
 
     # Calculate interest earned
      # ADD YOUR CODE HERE
-        def interest_earned(self):
-            interest = self.balance * (apr/100 * months/12)
-            self.balance += interest
-            return interest
-
+    def interest_earned(balance, apr, months):
+    
+        interest = balance * (apr/100 * months/12)
+        #return interest
+        return  interest
+    
 
     # Update the savings account balance by adding the interest earned
     # ADD YOUR CODE HERE
-        def __str__(self):
-            return
-        f' Updated Savings'( balance: {self.balance})
+    updated_balance = balance + interest_earned
+    savings_account.set_balance(updated_balance)
+        #return updated_balance
+    savings_account.set_interest(interest)
 
     
 
     # Pass the updated_balance to the set balance method using the instance of the SavingsAccount class.
     # ADD YOUR CODE HERE
-    SavingsAccount()
-
-
+def set_balance(self, balance):
+        """Sets the balance for the for the account"""
+        self.balance = updated_balance
+        savings_account.set_balance(updated_balance)
     # Pass the interest_earned to the set interest method using the instance of the SavingsAccount class.
     # ADD YOUR CODE HERE
-
+def set_interest(self, interest):
+    self.interest = interest_earned
+    savings_account.set_interest(interest)
     # Return the updated balance and interest earned.
-    return  # ADD YOUR CODE HERE
+    return  savings_account.balance, savings_account.interest
+
+    
