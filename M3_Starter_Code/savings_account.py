@@ -21,40 +21,40 @@ def create_savings_account(balance, interest_rate, months):
     # Create an instance of the `Account` class and pass in the balance and interest parameters.
     #  Hint: You need to add the interest as a value, i.e, 0.
     # ADD YOUR CODE HERE
-    savings_account = Account(0,0)
+    interest = 0
+    savings_account = Account(balance,interest)
+            
+
+        # Calculate interest earned
+        # ADD YOUR CODE HERE
+    def interest_earned(balance, apr, months):
+        interest = balance * (apr/100 * months/12)
+        return interest_earned
+
+
+        # Update the savings account balance by adding the interest earned
+        # ADD YOUR CODE HERE
+    def updated_balance(interest_earned, balance):
+            savings_updated_balance = balance + interest_earned
+            return updated_balance
+
         
 
-    # Calculate interest earned
-     # ADD YOUR CODE HERE
-    def interest_earned(balance, apr, months):
-    
-        interest = balance * (apr/100 * months/12)
-        #return interest
-        return  interest
-    
+        # Pass the updated_balance to the set balance method using the instance of the SavingsAccount class.
+        # ADD YOUR CODE HERE
+    def set_balance(self, updated_balance):
+            """Sets the balance for the for the account"""
+            self.balance = updated_balance
 
-    # Update the savings account balance by adding the interest earned
-    # ADD YOUR CODE HERE
-    def updated_balance():
-        updated_balance = balance + interest_earned
-        savings_account.set_balance(updated_balance)
-    #return updated_balance
-        savings_account.set_interest(interest)
+            return set_balance 
 
-    
-
-    # Pass the updated_balance to the set balance method using the instance of the SavingsAccount class.
-    # ADD YOUR CODE HERE
-    def set_balance(self, balance):
-        """Sets the balance for the for the account"""
-        self.balance = updated_balance
-        savings_account.set_balance(updated_balance)
-    # Pass the interest_earned to the set interest method using the instance of the SavingsAccount class.
-    # ADD YOUR CODE HERE
-    def set_interest(self, interest):
+        # Pass the interest_earned to the set interest method using the instance of the SavingsAccount class.
+        # ADD YOUR CODE HERE
+    def set_interest(self, interest_earned):
         self.interest = interest_earned
-        savings_account.set_interest(interest)
-    # Return the updated balance and interest earned.
-    return  savings_account.balance, savings_account.interest
+        # Return the updated balance and interest earned.
+        return set_interest
 
-    
+        
+
+        

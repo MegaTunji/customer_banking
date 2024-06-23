@@ -22,17 +22,19 @@ def main():
     savings_months = int(input("How many months have you had this account?"))
 
     # Call the create_savings_account function and pass the variables from the user.
-    updated_cd_balance, interest_earned = create_savings_account(savings_balance, savings_interest_rate, savings_months)
+    updated_savings_balance, interest_earned = create_savings_account(savings_balance, savings_interest_rate, savings_months)
+
 
     # Print out the interest earned and updated savings account balance with interest earned for the given months.
     # ADD YOUR CODE HERE
-    Updated_Interest_earned = create_savings_account(interest_earned)
+    updated_Interest_earned = create_savings_account(interest_earned)
     updated_savings_balance = create_savings_account(savings_balance)
+    print(updated_Interest_earned)
     print(updated_savings_balance)
 
     # Prompt the user to set the CD balance, interest rate, and months for the CD account.
     # ADD YOUR CODE HERE
-    cd_balance_balance = float(input("How much money do you currently have in your CD account: $ "))
+    cd_balance = float(input("How much money do you currently have in your CD account: $ "))
 
     # Prompt user to input interest
     cd_interest_rate = int(input("What interest rate would you like? (in percentage)"))
@@ -44,10 +46,12 @@ def main():
     
 
     # Call the create_cd_account function and pass the variables from the user.
-    updated_cd_balance, interest_earned = create_cd_account(cd_balance, cd_interest, cd_maturity)
+    updated_cd_balance, interest_earned = create_cd_account(cd_balance, cd_interest_rate, cd_months)
 
     # Print out the interest earned and updated CD account balance with interest earned for the given months.
     # ADD YOUR CODE HERE
+    print(updated_cd_balance)
 
 if __name__ == "__main__":
-    # Call the main function.
+    # Call the main function
+    main()
